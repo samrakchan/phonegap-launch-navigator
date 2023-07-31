@@ -59,7 +59,7 @@ public class LaunchNavigator {
      **********************/
     public static final String LOG_TAG = "LaunchNavigator";
     public final String NO_APP_FOUND = "No Activity found to handle Intent";
-    public final String MAPS_PROTOCOL = "http://maps.google.com/maps?";
+    public final String MAPS_PROTOCOL = "http://maps.google.com/maps/dir/?";
     public final String TURN_BY_TURN_PROTOCOL = "google.navigation:";
 
     // Explicitly supported apps
@@ -417,7 +417,7 @@ public class LaunchNavigator {
                 }
                 logMsg += " in turn-by-turn mode";
             }else{
-                url = MAPS_PROTOCOL + "daddr=" + destination;
+                url = MAPS_PROTOCOL + "destination=" + destination;
                 if(!isNull(start)){
                     logMsg += " from " + start;
                     url += "&saddr=" + start;
